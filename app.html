@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API tutorial</title>
+    <style>
+        .d-flex{
+            display: flex;
+        }
+        .justify-center{
+            justify-content: center;
+        }
+        .flex-col{
+            flex-direction: column;
+        }
+        .align-center{
+            align-items: center;
+        }
+        .hide{
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <form class="d-flex flex-col align-center">
+        <label for="task">
+            <h1>Can't decide on your own? Let us help you!</h1>
+        </label>
+        <input placeholder="Ask me a question" type="text" id="task">
+    </form>
+    <section class="img-container">
+        <article id="thinking" class="hide">
+                Let me think...
+        </article>
+        <article id="image-article"></article>
+        <h1 id="answer-text"></h1>
+    </section>
+    <script src="app.js"></script>
+</body>
+
+</html>
