@@ -11,6 +11,10 @@ function hideThinking(){
     thinkingArticle.classList.add('hide');
 }
 
+// fetch function is used for dealing with api requests
+// takes in two parameters
+// url: endpoint
+// paramters: method and headers
 function decide(event){
     event.preventDefault();
     imgArticle.innerHTML = "";  // setting it to empty to clear the DOM everytime request is made
@@ -21,7 +25,7 @@ function decide(event){
         headers:{
             'accept': 'application/json'
         }
-    }).then(async (response)=>{
+    }).then(async (response)=>{     // returns a Promise therefore we need async and await
         const result = await response.json();
         // display the result in img-article or answer-text
         const img = document.createElement('img');
